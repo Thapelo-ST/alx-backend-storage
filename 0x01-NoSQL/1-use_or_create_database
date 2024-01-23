@@ -1,0 +1,9 @@
+// uses or creaes a database my_db
+
+const conn = new Mongo();
+
+const dbName = 'my_db';
+
+const db = conn.getDB(dbName);
+
+print('switched to db my_db');
