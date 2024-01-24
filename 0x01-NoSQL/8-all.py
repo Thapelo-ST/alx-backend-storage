@@ -3,9 +3,9 @@
 
 
 def list_all(mongo_collection):
-	''' listing all the documents in a MongoDB collection'''
-	finder = mongo_collection.find({})
+    ''' listing all the documents in a MongoDB collection'''
+    finder = mongo_collection.find({})
 
-	documents = list(finder)
+    documents = list(finder)
 
-	return documents
+    return documents
