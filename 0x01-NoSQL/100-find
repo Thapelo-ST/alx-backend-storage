@@ -1,0 +1,4 @@
+// regex finding all documents starting by . . .
+
+db.school.find({ name : {$regex /^Holberton/}})
+
