@@ -12,7 +12,7 @@ const collection = db.getCollection("school");
 
 const result = collection.deleteMany({ "name" : "Holberton school" });
 
-
+/*
 if (result.deletedCount > 0) {
 	const output = {
 		"acknowledged": true,
@@ -20,3 +20,4 @@ if (result.deletedCount > 0) {
 	};
 	printjson(output);
 }
+*/
