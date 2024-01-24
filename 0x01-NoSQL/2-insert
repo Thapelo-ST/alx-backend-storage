@@ -1,0 +1,9 @@
+// 2-insert
+
+const conn = new Mongo();
+
+const dbName = 'my_db';
+
+const db = conn.getDB(dbName);
+
+db.school.insert({ name : "Holberton school" });

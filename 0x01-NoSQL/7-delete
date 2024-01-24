@@ -1,0 +1,22 @@
+// removing all the documents mathcing in the collection school
+
+// connecting to server
+
+const conn = new Mongo();
+
+const db = conn.getDB("my_db");
+
+const collection = db.getCollection("school");
+
+// removing document
+
+const result = collection.deleteMany({ "name" : "Holberton school" });
+
+
+if (result.deletedCount > 0) {
+	const output = {
+		"acknowledged": true,
+		"deletedCount": result.deletedCount
+	};
+	printjson(output);
+}
