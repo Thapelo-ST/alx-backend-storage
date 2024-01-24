@@ -1,0 +1,5 @@
+#!/bin/bash
+filename=$1
+
+cat "$filename" | mongo my_db
+

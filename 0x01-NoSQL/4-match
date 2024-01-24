@@ -1,17 +1,4 @@
-// listing all the documents in the collection school
+// listing all the documents in the collection school with a match
 
-// connecting to server
+db.school.find({ "name" : "Holberton school" });
 
-const conn = new Mongo();
-
-const db = conn.getDB("my_db");
-
-const collection = db.getCollection("school");
-
-// listing document
-
-const cursur = collection.find({ "name" : "Holberton school" });
-
-while (cursur.hasNext()) {
-        printjson(cursur.next());
-}

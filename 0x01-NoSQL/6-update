@@ -1,19 +1,8 @@
 //  updating the documents in the collection school
 
-// connecting to server
-
-const conn = new Mongo();
-
-const db = conn.getDB("my_db");
-
-const collection = db.getCollection("school");
-
-// updating documents
-
-const result = collection.update(
+db.school.update(
 	{ "name" : "Holberton school" },
 	{ $set: { "adress" : "972 Mission street" } },
 	{ multi: true }
 );
 
-print(result.nModified);

@@ -1,15 +1,4 @@
 // counting the documents in the collection school
 
-// connecting to server
+db.school.count();
 
-const conn = new Mongo();
-
-const db = conn.getDB("my_db");
-
-const collection = db.getCollection("school");
-
-// listing document
-
-const count = collection.count();
-
-print(count);
