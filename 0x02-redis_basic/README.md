@@ -1,10 +1,10 @@
-## Redis: A Simple Guide for Basic Operations and Caching
+# Redis: A Simple Guide for Basic Operations and Caching
 
-# Introduction
+## Introduction
 
 Redis is an open-source, in-memory data structure store that can be used as a database, cache, and message broker. It provides a fast and efficient way to store and retrieve data, making it a popular choice for a wide range of applications. This guide will walk you through the basics of using Redis for fundamental operations and showcase how to leverage it as a simple cache.
 
-# Installation and Setup
+## Installation and Setup
 
 Start by installing the redis-py library using the following command:
 
@@ -20,9 +20,9 @@ import redis
 redis_client = redis.StrictRedis(host='localhost', port=6379, db=0)
 ```
 
-## Basic Operations
+# Basic Operations
 
-# Set and Retrieve Key-Value Pairs
+## Set and Retrieve Key-Value Pairs
 
 ``` python
 # Set a key-value pair
@@ -33,7 +33,7 @@ value = redis_client.get('my_key')
 print(value.decode('utf-8'))  # Decode the bytes to string
 ```
 
-# Work with Lists and Hashes
+## Work with Lists and Hashes
 
 ``` python
 # List operations
@@ -48,7 +48,7 @@ hash_values = redis_client.hgetall('my_hash')
 print({key.decode('utf-8'): value.decode('utf-8') for key, value in hash_values.items()})
 ```
 
-# Increment and Decrement Operations
+## Increment and Decrement Operations
 
 ``` python
 # Increment a key's value
@@ -58,7 +58,7 @@ redis_client.incr('counter_key')
 redis_client.decr('counter_key')
 ```
 
-# Set Expiration Times
+## Set Expiration Times
 
 ``` python
 # Set a key with an expiration time (in seconds)
@@ -68,7 +68,7 @@ redis_client.setex('expiring_key', 60, 'value')
 redis_client.psetex('expiring_key_ms', 60000, 'value')
 ```
 
-# Using Redis as a Simple Cache
+## Using Redis as a Simple Cache
 
 Redis's in-memory nature makes it an excellent choice for caching data to enhance application performance. Here's a basic example:
 
@@ -97,7 +97,7 @@ def get_data_with_cache():
         return data
 ```
 
-# Error Handling
+## Error Handling
 
 Always handle Redis errors to ensure robustness in your applications:
 
